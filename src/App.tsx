@@ -7,7 +7,7 @@ import Menu from "./pages/Menu/Menu";
 
 function App() {
   return (
-    <div>
+    <>
       <Navbar />
       <div className="container w-full flex justify-center items-center text-2xl font-bold">
         <Routes>
@@ -15,9 +15,9 @@ function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Menu" element={<Menu />} />
           <Route path="/Contact" element={<Contact />} />
-        </Routes>
+        </Routes>  
       </div>
-    </div>
+    </>
   );
 }
 
