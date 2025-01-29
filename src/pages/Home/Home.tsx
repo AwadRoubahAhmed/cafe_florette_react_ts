@@ -1,4 +1,3 @@
-//"../../assets/hero-bg.jpg"
 import hero from "../../assets/hero-bg.jpg";
 
 const Home = () => {
@@ -6,18 +5,6 @@ const Home = () => {
     <>
       <main className="w-full h-[200px]">
         <section className="">
-          {/* <figure>
-          <img
-            src={hero}
-            alt="hero"
-            height={200}
-            className="bg-cover bg-center object-fill bg-transparent contrast-50"
-          />
-          <figcaption className="text-gray-800 text-center">
-            <h3>Discover our unique flavors and delights</h3>
-          </figcaption>
-        </figure> */}
-
           <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
             <div className="absolute inset-0">
               <img
@@ -45,9 +32,6 @@ const Home = () => {
           </div>
         </section>
       </main>
-      {/* <div className="py-10 text-gray-800">
-        &copy; {new Date().getFullYear()} Cafe Florette. All rights reserved.
-      </div> */}
     </>
   );
 };
