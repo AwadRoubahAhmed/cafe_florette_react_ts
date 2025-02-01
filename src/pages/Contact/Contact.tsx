@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
-    <section className="bg-white" id="contact">
-      <div className="bg-gray-100 mx-auto max-w-5xl text-gray-800 px-4 py-12 sm:px-6 lg:px-8 lg:py-20 rounded-lg">
+    <section className="container w-full bg-white" id="contact">
+      <div className="bg-gray-100 mx-auto max-w-6xl text-gray-800 my-12 px-6 py-12 sm:px-6 lg:px-8 lg:py-20 rounded-lg shadow-2xl">
         <div className="mb-2">
           <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-            <p className="mb-6 text-xl font-semibold uppercase tracking-wide text-gray-800 ">
+            <p className="mb-6 text-2xl text-gray-800 font-semibold font-mono uppercase tracking-wide  ">
               Contact
             </p>
-            <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-900  text-3xl sm:text-5xl">
+            <h2 className="font-heading mb-4 font-bold tracking-tight text-gray-900 text-3xl sm:text-5xl">
               Get in Touch
             </h2>
             <p className="mx-auto mt-4 max-w-3xl text-xl text-gray-800 ">
@@ -168,7 +168,7 @@ const Contact = () => {
                   <Link to="/">
                     <button
                       type="submit"
-                      className="btn btn-primary w-full text-gray-100 bg-blue-500 px-6 py-3 font-xl rounded-md sm:mb-0"
+                      className="btn btn-primary w-full text-gray-100 text-base bg-blue-500 hover:bg-blue-400 px-6 py-3 font-xl rounded-md sm:mb-0"
                     >
                       Send Message
                     </button>

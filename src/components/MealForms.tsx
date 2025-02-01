@@ -32,7 +32,7 @@ const MealForms: React.FC<MealFormsProps> = ({
           onChange={handleChange}
           className="border border-gray-400 text-gray-800 p-2 rounded-full max-w-3xl w-full"
         />
-        <button className="w-full max-w-3xl mt-4 bg-blue-500 text-gray-100 hover:bg-blue-400 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
+        <button className="btn btn-primary w-full max-w-3xl mt-4 bg-blue-500 text-gray-100 hover:bg-blue-400 py-2 px-6 rounded-full text-lg font-semibold transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg">
           Search
         </button>
       </form>
