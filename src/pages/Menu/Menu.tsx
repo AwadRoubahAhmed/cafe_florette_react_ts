@@ -21,7 +21,7 @@ const Menu = () => {
       const data = await response.json();
       setData(data.meals);
       setSearchQuery("");
-      console.log(data);
+      //console.log(data);
     } catch (error) {
       console.error("Fetch dataset not found", error);
     }

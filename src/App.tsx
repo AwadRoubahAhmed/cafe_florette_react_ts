@@ -14,11 +14,11 @@ function App() {
       <div className="container w-full flex justify-center items-center text-2xl font-bold">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/About" element={<About />} />
-          <Route path="/Menu/" element={<Menu />}>
-            <Route path=":recipeId" element={<RecipeDetails />} />
-          </Route>
-          <Route path="/Contact" element={<Contact />} />
+          <Route path="About" element={<About />} />
+          <Route path="Menu" element={<Menu />} />
+          <Route path="Menu/:recipeId" element={<RecipeDetails />} />
+          <Route path="Contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </div>
       <Footer />

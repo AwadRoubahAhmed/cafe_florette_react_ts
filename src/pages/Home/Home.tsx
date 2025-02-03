@@ -1,5 +1,4 @@
 import Hero from "../../components/Hero";
-import RecipeDetails from "../../components/RecipeDetails";
 import About from "../About/About";
 import Contact from "../Contact/Contact";
 
@@ -11,7 +10,6 @@ const Home = () => {
       <Hero />
       <About />
       <Menu />
-      <RecipeDetails />
       <Contact />
     </div>
   );

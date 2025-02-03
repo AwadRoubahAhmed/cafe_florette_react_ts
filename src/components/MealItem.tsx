@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { DataType } from "./Types";
 
 type MealItemProps = {
@@ -5,6 +6,7 @@ type MealItemProps = {
 };
 
 const MealItem: React.FC<MealItemProps> = ({ meal }) => {
+  const navigate = useNavigate();
   return (
     <div
       key={meal.idMeal}
@@ -18,7 +20,10 @@ const MealItem: React.FC<MealItemProps> = ({ meal }) => {
       <h2 className="font-bold text-xl text-gray-800 mt-2">{meal.strMeal}</h2>
       <h4 className="text-gray-600 text-sm">Category: {meal.strCategory}</h4>
       <p className="text-gray-600 text-sm">{meal.strTags}</p>
-      <button className="btn btn-primary w-full text-gray-100 text-base bg-blue-500 hover:bg-blue-400 px-6 py-3 font-bold rounded-md mt-4 mb-2">
+      <button
+        onClick={() => navigate("RecipeDetails")}
+        className="btn btn-primary w-full text-gray-100 text-base bg-blue-500 hover:bg-blue-400 px-6 py-3 font-bold rounded-md mt-4 mb-2"
+      >
         Ingredients
       </button>
     </div>
