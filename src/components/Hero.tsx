@@ -1,8 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import hero from "../assets/hero-bg.jpg";
+import BtnGetStarted from "./BtnGetStarted";
 
 const Hero = () => {
-  const navigate = useNavigate();
   return (
     <section className="w-full min-h-[200px]">
       <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
@@ -23,14 +22,16 @@ const Hero = () => {
             Discover amazing features and services that await you.
           </p>
 
-          <button
-            onClick={() => navigate("/Menu", { replace: true })}
+          <BtnGetStarted />
+
+          {/* <button
+            onClick={() => navigate("Menu")}
             type="button"
             className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer"
             aria-label="Learn more about us"
           >
             Get Started
-          </button>
+          </button> */}
         </div>
       </div>
     </section>

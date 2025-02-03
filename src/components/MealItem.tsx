@@ -21,7 +21,7 @@ const MealItem: React.FC<MealItemProps> = ({ meal }) => {
       <h4 className="text-gray-600 text-sm">Category: {meal.strCategory}</h4>
       <p className="text-gray-600 text-sm">{meal.strTags}</p>
       <button
-        onClick={() => navigate("RecipeDetails")}
+        onClick={() => navigate(`${meal.idMeal}`)}
         className="btn btn-primary w-full text-gray-100 text-base bg-blue-500 hover:bg-blue-400 px-6 py-3 font-bold rounded-md mt-4 mb-2"
       >
         Ingredients

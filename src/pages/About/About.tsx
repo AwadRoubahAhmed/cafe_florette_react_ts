@@ -2,8 +2,8 @@ import img from "../../assets/img.png";
 
 const About = () => {
   return (
-    <section className="min-h-[200px] bg-gray-100 rounded-lg shadow-2xl py-4">
-      <div className="container max-w-7xl mx-auto my-6 px-4 sm:px-6 lg:px-8">
+    <section className="min-h-[200px] bg-gray-100 rounded-lg py-4">
+      <div className="container max-w-7xl mx-auto my-6 px-4 sm:px-6 lg:px-8 shadow-2xl">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 bg-gray-200 p-4 mt-6 shadow-2xl rounded-md">
           <div className="max-w-lg">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
