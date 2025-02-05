@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { DataType } from "./Types";
 
 type RecipeDetailsProps = {
-  recipeId?: string | undefined;
+  recipeId: string;
+};
+
+type ApiDataTypeProps = {
+  meals: DataType[];
 };
 
 export default function RecipeDetails() {
   // State;
   const [recipe, setRecipe] = useState<DataType>();
   const { recipeId } = useParams<RecipeDetailsProps>();
+  const navigate = useNavigate();
 
   // Comportement;
   useEffect(() => {
@@ -17,7 +22,7 @@ export default function RecipeDetails() {
     console.log("monté du composant");
     fetch(`https:themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`)
       .then((response) => response.json())
-      .then((data) => {
+      .then((data: ApiDataTypeProps) => {
         setRecipe(data.meals[0]);
         console.log(data.meals[0]);
       })
@@ -30,7 +35,6 @@ export default function RecipeDetails() {
   return (
     <div className="w-full min-h-screen bg-gray-300 text-gray-800  p-8 rounded-lg">
       <h2 className="text-2xl md:text-3xl text-center">
-        {" "}
         Find your recipe details here
       </h2>
       {recipe && (
@@ -67,6 +71,13 @@ export default function RecipeDetails() {
                 )}
               </ul>
             </div>
+
+            <button
+              onClick={() => navigate("/Menu")}
+              className="btn btn-primary w-full text-gray-100 text-base bg-blue-500 hover:bg-blue-400 px-6 py-3 font-bold rounded-md mt-4 mb-2 cursor-pointer"
+            >
+              Back to Menu
+            </button>
           </div>
         </div>
       )}

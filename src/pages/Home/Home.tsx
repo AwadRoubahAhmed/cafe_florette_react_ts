@@ -6,7 +6,7 @@ import Menu from "../Menu/Menu";
 
 const Home = () => {
   return (
-    <div className="container flex-col">
+    <div className="container">
       <Hero />
       <About />
       <Menu />

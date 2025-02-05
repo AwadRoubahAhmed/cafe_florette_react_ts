@@ -35,7 +35,7 @@ const Menu = () => {
   //Affichage(render);
   return (
     <div className="container bg-white">
-      <div className="my-12 text-center text-gray-800">
+      <div className="my-8 text-center text-gray-800">
         <h1 className="font-bold text-3xl pt-8">Search Your Food Recipe</h1>
         <h4 className="font-medium px-12 text-lg sm:text-wrap my-3">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nemo
