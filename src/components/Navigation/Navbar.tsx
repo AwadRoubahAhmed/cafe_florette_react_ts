@@ -2,6 +2,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import BtnGetStarted from "../BtnGetStarted";
 import { FaWindowClose } from "react-icons/fa";
 import { IoMenuSharp } from "react-icons/io5";
+import { motion } from "motion/react";
 import {
   FaFacebook,
   FaTwitter,
@@ -21,7 +22,8 @@ const Navbar = () => {
     <header className="container sticky top-0 z-50 flex justify-between items-center bg-slate-900 text-slate-100 shadow-2xl p-4">
       {/* Logo Title */}
       <div>
-        <h1
+        <motion.h1
+          animate={{ x: [null, 50, 0] }}
           onClick={() => navigate("/", { replace: true })}
           className="text-2xl font-bold cursor-pointer"
         >
@@ -29,16 +31,18 @@ const Navbar = () => {
           <span className="text-blue-500 text-3xl font-bold rounded-full">
             .
           </span>
-        </h1>
+        </motion.h1>
       </div>
 
       {/* Navigation Menu */}
-      <div className="text-gray-100/90">
+      <div className="text-gray-100">
         <ul className="hidden md:flex justify-center items-center font-bold space-x-6">
           <li className="">
             <NavLink
               to="/"
-              className="text-base text-gray-100/90 hover:text-blue-500"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500" : undefined
+              }
             >
               Home
             </NavLink>
@@ -46,7 +50,9 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/About"
-              className="text-base text-gray-100/90 hover:text-blue-500"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500" : undefined
+              }
             >
               About
             </NavLink>
@@ -54,7 +60,9 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/Menu"
-              className="text-base text-gray-100/90 hover:text-blue-500"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500" : undefined
+              }
             >
               Recipes
             </NavLink>
@@ -62,7 +70,9 @@ const Navbar = () => {
           <li>
             <NavLink
               to="/Contact"
-              className="text-base text-gray-100/90 hover:text-blue-500"
+              className={({ isActive }) =>
+                isActive ? "text-blue-500" : undefined
+              }
             >
               Contact
             </NavLink>
@@ -107,22 +117,34 @@ const Navbar = () => {
         </h1>
         <ul className="mt-4 font-bold">
           <li className="border-b-1 mb-4">
-            <NavLink to="/" className="text-base hover:text-blue-500">
+            <NavLink
+              to="/"
+              className="text-base hover:text-blue-500 text-gray-800"
+            >
               Home
             </NavLink>
           </li>
           <li className="border-b-1 mb-4">
-            <NavLink to="/About" className="text-base hover:text-blue-500">
+            <NavLink
+              to="/About"
+              className="text-base hover:text-blue-500 text-gray-800"
+            >
               About
             </NavLink>
           </li>
           <li className="border-b-1 mb-4">
-            <NavLink to="/Menu" className="text-base hover:text-blue-500">
+            <NavLink
+              to="/Menu"
+              className="text-base hover:text-blue-500 text-gray-800"
+            >
               Recipes
             </NavLink>
           </li>
           <li className="border-b-1 mb-4">
-            <NavLink to="/Contact" className="text-base hover:text-blue-500">
+            <NavLink
+              to="/Contact"
+              className="text-base hover:text-blue-500 text-gray-800"
+            >
               Contact
             </NavLink>
           </li>

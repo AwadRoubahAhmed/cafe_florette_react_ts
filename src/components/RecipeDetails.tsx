@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { DataType } from "./Types";
+import { motion } from "motion/react";
 
 type RecipeDetailsProps = {
   recipeId: string;
 };
 
-type ApiDataTypeProps = {
+type ApiDataType = {
   meals: DataType[];
 };
 
@@ -22,7 +23,7 @@ export default function RecipeDetails() {
     console.log("monté du composant");
     fetch(`https:themealdb.com/api/json/v1/1/lookup.php?i=${recipeId}`)
       .then((response) => response.json())
-      .then((data: ApiDataTypeProps) => {
+      .then((data: ApiDataType) => {
         setRecipe(data.meals[0]);
         console.log(data.meals[0]);
       })
@@ -40,7 +41,11 @@ export default function RecipeDetails() {
       {recipe && (
         <div className="w-full max-w-5xl min-h-[500px] flex flex-col border border-gray-300 gap-4 bg-gray-100/90 text-gray-800 shadow-2xl rounded-md mx-auto my-6 p-8">
           <div className="">
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.2 },
+              }}
               src={recipe.strMealThumb}
               alt={recipe.strMeal}
               className="max-w-6xl md:w-3/4 h-80 object-cover rounded-xl mx-auto"
@@ -72,12 +77,14 @@ export default function RecipeDetails() {
               </ul>
             </div>
 
-            <button
+            <motion.button
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
               onClick={() => navigate("/Menu")}
               className="btn btn-primary w-full text-gray-100 text-base bg-blue-500 hover:bg-blue-400 px-6 py-3 font-bold rounded-md mt-4 mb-2 cursor-pointer"
             >
               Back to Menu
-            </button>
+            </motion.button>
           </div>
         </div>
       )}

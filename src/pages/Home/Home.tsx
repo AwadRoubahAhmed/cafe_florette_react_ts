@@ -3,15 +3,20 @@ import About from "../About/About";
 import Contact from "../Contact/Contact";
 
 import Menu from "../Menu/Menu";
+import { motion } from "motion/react";
 
 const Home = () => {
   return (
-    <div className="container">
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      className="container"
+    >
       <Hero />
       <About />
       <Menu />
       <Contact />
-    </div>
+    </motion.div>
   );
 };
 

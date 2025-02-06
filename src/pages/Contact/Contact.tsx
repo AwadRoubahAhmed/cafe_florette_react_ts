@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { motion } from "motion/react";
 
 const Contact = () => {
+  const navigate = useNavigate();
   return (
     <section className="container w-full bg-white" id="contact">
       <div className="bg-gray-100 mx-auto max-w-6xl text-gray-800 my-12 px-6 py-12 sm:px-6 lg:px-8 lg:py-20 rounded-lg shadow-2xl">
@@ -26,7 +28,11 @@ const Contact = () => {
                 scelerisque sagittis ante, ac tincidunt sem venenatis ut.
               </p>
               <ul className="mb-6 md:mb-0">
-                <li className="flex">
+                <motion.li
+                  animate={{ x: [null, 100, 0] }}
+                  transition={{ ease: "easeOut", duration: 2 }}
+                  className="flex"
+                >
                   <div className="flex h-10 w-10 items-center justify-center rounded bg-blue-500 text-gray-50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -45,16 +51,18 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4 mb-4">
-                    <h3 className="mb-2 text-lg font-semibold leading-6 text-gray-800">
+                    <h3 className="mb-2 text-lg md:text-xl font-semibold leading-6 text-gray-800">
                       Our Address
                     </h3>
-                    <p className="text-gray-800 ">
+                    <p className="text-gray-600 text-base md:text-lg">
                       1230 Maecenas Street Donec Road
                     </p>
-                    <p className="text-gray-800 ">New York, EEUU</p>
+                    <p className="text-gray-600 text-base md:text-lg">
+                      New York, EEUU
+                    </p>
                   </div>
-                </li>
-                <li className="flex">
+                </motion.li>
+                <motion.li animate={{ x: [null, 100, 0] }} className="flex">
                   <div className="flex h-10 w-10 items-center justify-center rounded bg-blue-500 text-gray-50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -74,14 +82,18 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4 mb-4">
-                    <h3 className="mb-2 text-lg font-semibold leading-6 text-gray-800 ">
+                    <h3 className="mb-2 text-lg md:text-xl font-semibold leading-6 text-gray-800 ">
                       Contact
                     </h3>
-                    <p className="text-gray-800 ">Mobile: +1 (123) 456-7890</p>
-                    <p className="text-gray-800 ">Mail: tailnext@gmail.com</p>
+                    <p className="text-gray-600 text-base md:text-lg">
+                      Mobile: +1 (123) 456-7890
+                    </p>
+                    <p className="text-gray-600 text-base md:text-lg">
+                      Mail: tailnext@gmail.com
+                    </p>
                   </div>
-                </li>
-                <li className="flex">
+                </motion.li>
+                <motion.li animate={{ x: [null, 100, 0] }} className="flex">
                   <div className="flex h-10 w-10 items-center justify-center rounded bg-blue-500 text-gray-50">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -100,23 +112,26 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="ml-4 mb-4">
-                    <h3 className="mb-2 text-lg font-semibold leading-6 text-gray-800 ">
+                    <h3 className="mb-2 text-lg md:text-xl font-semibold leading-6 text-gray-800 ">
                       Working hours
                     </h3>
-                    <p className="text-gray-800 ">
+                    <p className="text-gray-600 text-base md:text-lg">
                       Monday - Friday: 08:00 - 17:00
                     </p>
-                    <p className="text-gray-800 ">
+                    <p className="text-gray-600 text-base md:text-lg">
                       Saturday &amp; Sunday: 08:00 - 12:00
                     </p>
                   </div>
-                </li>
+                </motion.li>
               </ul>
             </div>
             <div className="card h-fit max-w-6xl p-5 md:p-12" id="form">
-              <h2 className="mb-4 text-2xl font-bold ">
+              <motion.h2
+                animate={{ x: [null, 100, 0] }}
+                className="mb-4 text-2xl font-bold "
+              >
                 Ready to Get Started?
-              </h2>
+              </motion.h2>
               <form id="contactForm">
                 <div className="mb-6">
                   <div className="mx-0 mb-1 sm:mb-4">
@@ -129,8 +144,8 @@ const Contact = () => {
                         type="text"
                         id="name"
                         // autocomplete="given-name"
-                        placeholder="Your name"
-                        className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md  sm:mb-0"
+                        placeholder="Your name..."
+                        className="mb-2 w-full rounded-md border border-gray-400 text-lg py-2 pl-2 pr-4 shadow-md sm:mb-0"
                         name="name"
                       />
                     </div>
@@ -143,8 +158,8 @@ const Contact = () => {
                         type="email"
                         id="email"
                         // autocomplete="email"
-                        placeholder="Your email address"
-                        className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md  sm:mb-0"
+                        placeholder="Your email address..."
+                        className="mb-2 w-full rounded-md border border-gray-400  text-lg py-2 pl-2 pr-4 shadow-md  sm:mb-0"
                         name="email"
                       />
                     </div>
@@ -160,19 +175,20 @@ const Contact = () => {
                       cols={30}
                       rows={5}
                       placeholder="Write your message..."
-                      className="mb-2 w-full rounded-md border border-gray-400 py-2 pl-2 pr-4 shadow-md  sm:mb-0"
+                      className="mb-2 w-full rounded-md border border-gray-400 text-lg py-2 pl-2 pr-4 shadow-md  sm:mb-0"
                     ></textarea>
                   </div>
                 </div>
                 <div className="text-center">
-                  <Link to="/">
-                    <button
-                      type="submit"
-                      className="btn btn-primary w-full text-gray-100 text-base bg-blue-500 hover:bg-blue-400 px-6 py-3 font-xl rounded-md sm:mb-0"
-                    >
-                      Send Message
-                    </button>
-                  </Link>
+                  <motion.button
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    onClick={() => navigate("/")}
+                    type="submit"
+                    className="btn btn-primary w-full text-gray-100 text-base bg-blue-500 hover:bg-blue-400 px-6 py-3 font-xl rounded-md sm:mb-0 cursor-pointer"
+                  >
+                    Send Message
+                  </motion.button>
                 </div>
               </form>
             </div>
