@@ -4,8 +4,8 @@ import { motion } from "motion/react";
 const Contact = () => {
   const navigate = useNavigate();
   return (
-    <section className="container w-full bg-white" id="contact">
-      <div className="bg-gray-100 mx-auto max-w-6xl text-gray-800 my-12 px-6 py-12 sm:px-6 lg:px-8 lg:py-20 rounded-lg shadow-2xl">
+    <section className="container mx-auto w-full bg-white" id="contact">
+      <div className="bg-gray-100 mx-auto max-w-6xl text-gray-800 my-0 px-6 py-12 sm:px-6 lg:px-8 lg:py-20 rounded-lg shadow-2xl">
         <div className="mb-2">
           <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
             <p className="mb-6 text-2xl text-gray-800 font-semibold font-mono uppercase tracking-wide  ">

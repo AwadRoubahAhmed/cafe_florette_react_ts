@@ -35,9 +35,9 @@ const Navbar = () => {
       </div>
 
       {/* Navigation Menu */}
-      <div className="text-gray-100">
+      <div className="text-gray-900">
         <ul className="hidden md:flex justify-center items-center font-bold space-x-6">
-          <li className="">
+          <li className="text-gray-900">
             <NavLink
               to="/"
               className={({ isActive }) =>

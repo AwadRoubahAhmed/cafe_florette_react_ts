@@ -9,9 +9,9 @@ import RecipeDetails from "./components/RecipeDetails";
 
 function App() {
   return (
-    <div className="mx-auto px-4 bg-gray-100">
+    <div className="mx-auto px-4 bg-gray-200">
       <Navbar />
-      <div className="container mx-auto w-full flex justify-center items-center text-2xl font-bold">
+      <div className="container w-full flex justify-center items-center text-2xl font-bold">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="About" element={<About />} />
