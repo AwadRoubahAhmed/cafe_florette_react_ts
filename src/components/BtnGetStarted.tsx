@@ -10,7 +10,7 @@ const BtnGetStarted = () => {
         animate={{ scale: 1 }}
         onClick={() => navigate("Menu")}
         type="button"
-        className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer"
+        className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-2 rounded-2xl text-base transition duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg cursor-pointer"
         aria-label="Learn more about us"
       >
         Get Started
