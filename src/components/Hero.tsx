@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 const Hero = () => {
   return (
     <section className="w-full min-h-[200px]">
-      <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 h-screen text-white overflow-hidden">
+      <div className="relative bg-gradient-to-r from-purple-600 to-blue-600 min-h-[500px] text-white overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={hero}
@@ -15,10 +15,10 @@ const Hero = () => {
           <div className="absolute inset-0 bg-black opacity-50"></div>
         </div>
 
-        <div className="relative z-10 flex flex-col justify-center items-center h-full text-center">
+        <div className="relative my-32 z-10 flex flex-col justify-center items-center h-full text-center">
           <motion.h1
             animate={{ x: [null, 50, 0] }}
-            className="text-5xl  font-bold leading-tight mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 "
           >
             Welcome to Our Cafe Florette Website
           </motion.h1>
