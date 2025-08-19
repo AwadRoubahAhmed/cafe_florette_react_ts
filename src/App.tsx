@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="container w-full flex justify-center items-center text-2xl font-bold">
+      <div className="container mx-auto w-full flex justify-center items-center text-2xl font-bold">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="About" element={<About />} />
