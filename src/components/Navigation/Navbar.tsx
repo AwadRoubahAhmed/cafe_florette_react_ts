@@ -19,7 +19,7 @@ const Navbar = () => {
   // Comportements;
   const toggleMenu = () => setShowMenu(!showMenu);
   return (
-    <header className="container sticky top-0 z-50 flex justify-between items-center bg-slate-900 text-slate-100 shadow-2xl p-4 rounded-t-lg">
+    <header className="container sticky top-0 z-50 flex justify-between items-center bg-slate-900  text-slate-100 shadow-2xl p-4 rounded-t-lg">
       {/* Logo Title */}
       <div>
         <motion.h1
@@ -35,7 +35,7 @@ const Navbar = () => {
       </div>
 
       {/* Navigation Menu */}
-      <div className="text-gray-900">
+      <div className="text-gray-900 ">
         <ul className="hidden md:flex justify-center items-center font-bold space-x-6">
           <li className="text-gray-900">
             <NavLink
@@ -104,7 +104,7 @@ const Navbar = () => {
         onClick={toggleMenu}
         className={
           showMenu
-            ? "w-full absolute left-0 top-16 bg-gray-100/90 text-gray-800 px-4 py-4 flex flex-col rounded-xl"
+            ? "w-full absolute left-0 top-16 bg-gray-100/90 text-gray-800 px-4 py-4 flex flex-col"
             : "absolute left-[-100%]"
         }
       >
