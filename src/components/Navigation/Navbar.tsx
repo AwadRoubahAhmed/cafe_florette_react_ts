@@ -92,9 +92,9 @@ const Navbar = () => {
           className="flex items-center justify-center cursor-pointer"
         >
           {showMenu ? (
-            <FaWindowClose className="h-6 w-6 text-black-950 font-bold " />
+            <FaWindowClose className="h-6 w-6 fill-current text-bleu-500 font-bold " />
           ) : (
-            <IoMenuSharp className="h-6 w-6 text-blue-500 font-bold " />
+            <IoMenuSharp className="h-6 w-6 fill-current text-blue-500 font-bold " />
           )}
         </div>
       </div>
@@ -104,17 +104,17 @@ const Navbar = () => {
         onClick={toggleMenu}
         className={
           showMenu
-            ? "w-full absolute left-0 top-0 bg-gray-100/90 text-gray-800 px-4 py-4 flex flex-col rounded-xl"
+            ? "w-full absolute left-0 top-16 bg-gray-100/90 text-gray-800 px-4 py-4 flex flex-col rounded-xl"
             : "absolute left-[-100%]"
         }
       >
-        <h1
+        {/* <h1
           className="text-2xl font-bold cursor-pointer"
           onClick={() => navigate("/", { replace: true })}
         >
           Café Florette
           <span className="text-blue-500 text-3xl rounded-full">.</span>
-        </h1>
+        </h1> */}
         <ul className="mt-4 font-bold">
           <li className="border-b-1 mb-4">
             <NavLink
