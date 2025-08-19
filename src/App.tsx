@@ -9,7 +9,7 @@ import RecipeDetails from "./components/RecipeDetails";
 
 function App() {
   return (
-    <>
+    <div className="mx-auto px-4 bg-gray-100">
       <Navbar />
       <div className="container mx-auto w-full flex justify-center items-center text-2xl font-bold">
         <Routes>
@@ -22,7 +22,7 @@ function App() {
         </Routes>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
