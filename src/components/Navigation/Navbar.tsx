@@ -19,7 +19,7 @@ const Navbar = () => {
   // Comportements;
   const toggleMenu = () => setShowMenu(!showMenu);
   return (
-    <header className="container sticky top-0 z-50 flex justify-between items-center bg-slate-900 text-slate-100 shadow-2xl p-4">
+    <header className="container sticky top-0 z-50 flex justify-between items-center bg-slate-900 text-slate-100 shadow-2xl p-4 rounded-t-lg">
       {/* Logo Title */}
       <div>
         <motion.h1
