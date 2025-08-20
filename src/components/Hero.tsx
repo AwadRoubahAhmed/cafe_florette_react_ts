@@ -1,5 +1,5 @@
 import hero from "../assets/hero-bg.jpg";
-import BtnGetStarted from "./BtnGetStarted";
+import BtnGetStarted from "./ui/BtnGetStarted";
 import { motion } from "motion/react";
 
 const Hero = () => {

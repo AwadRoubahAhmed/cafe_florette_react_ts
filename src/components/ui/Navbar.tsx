@@ -1,5 +1,5 @@
 import { NavLink, useNavigate } from "react-router-dom";
-import BtnGetStarted from "../BtnGetStarted";
+import BtnGetStarted from "./BtnGetStarted";
 import { FaWindowClose } from "react-icons/fa";
 import { IoMenuSharp } from "react-icons/io5";
 import { motion } from "motion/react";
