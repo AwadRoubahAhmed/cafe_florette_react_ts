@@ -1,4 +1,4 @@
-// Types Checking;
+//Types Checking;
 
 export type DataType = {
   idMeal: string;
@@ -15,4 +15,10 @@ export type DataType = {
   strIngredient5: string;
   strIngredient6: string;
   strIngredient7: string;
+};
+
+export type MealFormsProps = {
+  searchQuery: string;
+  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+  fetchingData: () => Promise<void>;
 };
