@@ -20,3 +20,7 @@
     color: var(--color-blue-500) /* oklch(0.623 0.214 259.815) */;
   }
 }
+
+.container {
+  margin: auto;
+}

@@ -1,4 +1,9 @@
-export default function InputsForm() {
+import { MealFormsProps } from "../Types";
+
+export default function InputsForm({
+  searchQuery,
+  setSearchQuery,
+}: MealFormsProps) {
   // States
   // Comportements
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {

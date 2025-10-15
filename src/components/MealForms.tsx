@@ -1,9 +1,6 @@
 import { motion } from "motion/react";
-type MealFormsProps = {
-  searchQuery: string;
-  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
-  fetchingData: () => Promise<void>;
-};
+import { MealFormsProps } from "./Types";
+import InputsForm from "./ui/InputsForm";
 
 const MealForms: React.FC<MealFormsProps> = ({
   searchQuery,
@@ -12,27 +9,30 @@ const MealForms: React.FC<MealFormsProps> = ({
 }) => {
   //State;
 
-  //Comportement;
+  //Comportements;
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     fetchingData();
   };
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log(event.target.value);
-    setSearchQuery(event.target.value);
-  };
+  // const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   console.log(event.target.value);
+  //   setSearchQuery(event.target.value);
+  // };
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter your food ingredient..."
+        {/* <input
+          type="search"
+          placeholder="Search your food ingredient..."
           value={searchQuery || ""}
           onChange={handleChange}
-          className="border border-gray-400 text-gray-800 p-2 rounded-full max-w-3xl w-full"
-        />
+          className="grow border border-gray-400 text-gray-800 p-2 rounded-full max-w-3xl w-full"
+        /> */}
+
+        <InputsForm searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+
         <motion.button
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
